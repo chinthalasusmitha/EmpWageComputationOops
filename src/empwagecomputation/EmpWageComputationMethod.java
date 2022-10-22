@@ -1,12 +1,12 @@
 package empwagecomputation;
 
 public class EmpWageComputationMethod {
-    private int IS_PART_TIME = 4;
-    private int IS_FULL_TIME = 8;
+    private static int IS_PART_TIME = 4;
+    private static int IS_FULL_TIME = 8;
 
     private String company;
-    private int empRatePerHour;
-    private int numOfWorkingDays;
+    private int empRatePerHour = 100;
+    private int numOfWorkingDays = 20;
     private int maxHoursPerMonth;
 //    public EmpWageComputationMethod(){
 //
@@ -23,11 +23,11 @@ public class EmpWageComputationMethod {
 
     }
 
-    public int getIS_PART_TIME() {
+    public static int getIS_PART_TIME() {
         return IS_PART_TIME;
     }
 
-    public int getIS_FULL_TIME() {
+    public static int getIS_FULL_TIME() {
         return IS_FULL_TIME;
     }
 

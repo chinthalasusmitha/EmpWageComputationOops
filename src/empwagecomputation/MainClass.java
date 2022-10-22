@@ -3,12 +3,12 @@ package empwagecomputation;
 import java.util.Random;
 
 public class MainClass {
-//    EmpWageComputationMethod empWageComputationMethod = new EmpWageComputationMethod();
+//    EmpWageComputationMethod = new EmpWageComputationMethod();
 
     //    public static void totalEmpWage() {
     public static void main(String[] args) {
         Random random = new Random();
-        EmpWageComputationMethod EmpWageComputationMethod = new EmpWageComputationMethod();
+        EmpWageComputationMethod employee = new EmpWageComputationMethod();
 
         int totalWorkingDays = 0;
         int totalWorkingHours = 0;
@@ -16,43 +16,58 @@ public class MainClass {
         int totalEmpWage = 0;
         int empHrs = 0;
 
-        while (totalWorkingDays < EmpWageComputationMethod.getNumOfWorkingDays()
-                && totalWorkingHours < EmpWageComputationMethod.getMaxHoursPerMonth()) {
+        while ((totalWorkingDays < 20) && (totalWorkingHours < 100)) {
+
             totalWorkingDays++;
             int empCheck = random.nextInt(3);
             switch (empCheck) {
 
                 case 1:
-//                    empHrs = 4;
+
                     EmpWageComputationMethod.getIS_PART_TIME();
+                    empHrs = 4;
+                    System.out.println("Display Part time");
                     break;
                 case 2:
-//                    IS_FULL_TIME -> empHrs = 8;
                     EmpWageComputationMethod.getIS_FULL_TIME();
+                    empHrs = 8;
+                    System.out.println("Display full time");
+
                     break;
                 default:
                     empHrs = 0;
+                    System.out.println("Display default time");
+
 
             }
             totalWorkingHours = empHrs + totalWorkingHours;
-            empWage = empHrs * EmpWageComputationMethod.getEmpRatePerHour();
+            empWage = empHrs * employee.getEmpRatePerHour();
             System.out.println("day " + totalWorkingDays + " = " + empWage);
             totalEmpWage = empWage + totalEmpWage;
-            EmpWageComputationMethod.getEmpRatePerHour();
-        }
-        EmpWageComputationMethod empWageComputationMethod = new EmpWageComputationMethod("Dmart",
-                20, 20, 100);
-        EmpWageComputationMethod wipro = new EmpWageComputationMethod("wipro", 25,
-                15, 100);
-        System.out.println(empWageComputationMethod.toString());
-//        System.out.println("salary of " + empWageComputationMethod.getCompany()+ " employee is " + totalEmpWage);
+            employee.getEmpRatePerHour();
+            System.out.println(employee.toString());
 
+            employee.setCompany("wipro");
+            System.out.println("salary of " + employee.getCompany() + " employee is " + totalEmpWage);
+
+        }
     }
 }
+//
+//    private static void employee(String dMArt, int i, int i1, int i2) {
+//
+//
+//        System.out.println("Welcome to Employee Wage Computation Program on Master Branch");
+//        employee("dMArt", 20, 2, 10);
+//        employee("Reliance", 30, 4, 14);
+//
+//    }
+//}
+
 
 //    public static void main(String[] args) {
-//        EmpWageComputationMethod dMart = new EmpWageComputationMethod("dmart", 20, 20, 100);
-//        EmpWageComputationMethod wipro = new EmpWageComputationMethod("wipro", 25, 15, 100);
+//        EmpWageComputationMethod dMart = new EmpWageComputationMethod("dMart", 20, 20, 100);
+//        EmpWageComputationMethod cipro = new EmpWageComputationMethod("Cipro", 25, 15, 100);
 
 //    }
 
