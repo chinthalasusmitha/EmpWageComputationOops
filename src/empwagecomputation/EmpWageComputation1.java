@@ -47,13 +47,14 @@ public class EmpWageComputation1 {
 
         }
         System.out.println("salary of " + company + " employee is " + totalEmpWage);
-
     }
-
     public static void main(String[] args) {
         EmpWageComputation1 dMart = new EmpWageComputation1("dmart", 20, 20, 100);
         dMart.totalEmpWage();
-        EmpWageComputation1 wipro = new EmpWageComputation1("wipro", 25, 15, 100);
+        EmpWageComputation1 wipro = new EmpWageComputation1("wipro", 25, 20, 100);
         wipro.totalEmpWage();
+        EmpWageComputation1 cognizant = new EmpWageComputation1("cognizant",30,20,100);
+        cognizant.totalEmpWage();
     }
+
 }
