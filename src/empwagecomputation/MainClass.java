@@ -53,6 +53,7 @@ public class MainClass {
         }
     }
 }
+
 //
 //    private static void employee(String dMArt, int i, int i1, int i2) {
 //
@@ -67,8 +68,9 @@ public class MainClass {
 
 //    public static void main(String[] args) {
 //        EmpWageComputationMethod dMart = new EmpWageComputationMethod("dMart", 20, 20, 100);
-//        EmpWageComputationMethod cipro = new EmpWageComputationMethod("Cipro", 25, 15, 100);
-
+//     dMart.totalEmpWage();
+//     EmpWageComputationMethod cipro = new EmpWageComputationMethod("Cipro", 25, 15, 100);
+//    cipro.totalEmpWage();
 //    }
 
 
